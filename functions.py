@@ -77,7 +77,7 @@ def nmapscan():
     if nmapsorgu == "1":
         nmap = input("Tarama Yapılacak IP adresi: ")
         print("Lütfen Bekleyiniz...")
-        os.system(f"nmap -sS -sV {nmap}")
+        os.system(f"sudo nmap -sS -sV {nmap}")
         time.sleep(1000)  # ------------------- geçici çözüm olarak sleep iş görür fakat yeni çözüm şart
 
     elif nmapsorgu == "2":
@@ -190,11 +190,13 @@ def tcpdump():
 
 def docker_openvas():
     os.system("clear")
-    os.system("sudo docker run -d -p 443:443 --name openvas mikesplain/openvas")
+    os.system("sudo docker run -d -p 443:443 --name openvas1 mikesplain/openvas")
     print("OpenVAS Docker container started. Access it at https://localhost:443")
 
 def docker_ollama():
     os.system("clear")
+    os.system("sudo docker rm $(docker ps -aq)")
     os.system("docker pull ollama/ollama")
-    os.system("sudo docker run -d -v ollama:/root/.ollama -p 11437:11434 --name ollama5 ollama/ollama")
-    os.system("docker exec -it ollama5 ollama run llama3")
+    os.system("sudo docker run -d -v ollama:/root/.ollama -p 11437:11434 --name ollama ollama/ollama")
+    os.system("docker exec -it ollama ollama run llama3")
+    #os.system("curl http://localhost:11434/api/generate -d '{\"model\": \"llama3\",\"prompt\":\"Why is the sky blue\"}'")
