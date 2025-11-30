@@ -135,14 +135,17 @@ cd oznursm/securitytoolkit
 ---
 
 3. Uygulamayı başlatın
-
+```bash
 python3 start.py
+```
+
+---
 
 📁 Proje Dosya Yapısı
 securitytoolkit/
-│── start.py          # GTK arayüzü
-│── functions.py      # Tüm araç fonksiyonları
-│── README.md         # Proje açıklaması
+├── start.py          # GTK arayüzü
+├── functions.py      # Tüm araç fonksiyonları
+└── README.md         # Proje açıklaması
 
 ---
 
