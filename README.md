@@ -88,3 +88,92 @@ Aşağıdaki araçları tek menü altında sunar:
 sudo apt install python3-gi python3-gi-cairo gir1.2-gtk-3.0
 pip install pyfiglet requests
 ```
+
+---
+
+### 🔹 Kali Linux Araçları
+```bash
+sudo apt install macchanger dmitry theharvester netdiscover \
+wafw00f dirb dnsenum nmap exploitdb nikto exiftool wpscan crunch \
+rustscan tcpdump docker.io
+```
+
+---
+
+### 🔹 Ek Gereksinimler
+
+Docker servisi:
+```bash
+sudo systemctl enable docker
+sudo systemctl start docker
+```
+
+---
+
+WPScan Ruby bağımlılıkları:
+```bash
+sudo apt install ruby ruby-dev
+sudo gem install wpscan
+```
+
+---
+
+🛠️ Kurulum
+
+1. Depoyu klonlayın
+```bash
+git clone https://github.com/oznursm/securitytoolkit.git
+```
+
+---
+
+2. Dizine girin
+```bash
+cd oznursm/securitytoolkit
+```
+
+---
+
+3. Uygulamayı başlatın
+
+python3 start.py
+
+📁 Proje Dosya Yapısı
+securitytoolkit/
+│── start.py          # GTK arayüzü
+│── functions.py      # Tüm araç fonksiyonları
+│── README.md         # Proje açıklaması
+
+---
+
+🎮 Kullanım
+
+Uygulama açıldığında aşağıdaki işlemleri tek tıkla yapabilirsiniz:
+
+- MAC adresi değiştirme
+
+- Bilgi toplama araçları
+
+- Nmap taramaları
+
+- Searchsploit
+
+- Nikto taraması
+
+- Exiftool ile analiz
+
+- WPScan
+
+- Rustscan
+
+- TCPDump
+
+- Docker OpenVAS
+
+- Docker Ollama
+
+⚠️ Yasal Uyarı
+
+Bu uygulama yalnızca izin verilen sistemlerde kullanılmalıdır.
+İzinsiz sızma testi yapmak yasa dışıdır ve suçtur.
+Bu proje yalnızca eğitim, deneme, ve etik siber güvenlik amaçları için hazırlanmıştır.
